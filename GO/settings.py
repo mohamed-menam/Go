@@ -26,7 +26,7 @@ SECRET_KEY = 'gz13j*t_0e=ogm)sg_qz%fuzfs5&dyzy1tg51kh6xd@n)wla8z'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://still-inlet-57859.herokuapp.com/ '
+    'https://still-inlet-57859.herokuapp.com/'
 ]
 
 
