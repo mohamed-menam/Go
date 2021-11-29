@@ -25,7 +25,9 @@ SECRET_KEY = 'gz13j*t_0e=ogm)sg_qz%fuzfs5&dyzy1tg51kh6xd@n)wla8z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'https://still-inlet-57859.herokuapp.com/ '
+]
 
 
 # Application definition
