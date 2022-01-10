@@ -9,7 +9,7 @@ class GenreAdmin(admin.ModelAdmin):
 
 class MovieAdmin(admin.ModelAdmin):
     list_display = ("id", "title", "release_year",
-                    "number_in_stock", "genre", "date_created",)
+                    "number_in_stock", "genre", "daliy_rate", "date_created")
 
 
 admin.site.register(Genre, GenreAdmin)

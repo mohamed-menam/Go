@@ -8,6 +8,7 @@ django = "==3.2.9"
 django-tastypie = "*"
 gunicorn = "*"
 whitenoise = "*"
+djangorestframework = "*"
 
 [dev-packages]
 autopep8 = "*"

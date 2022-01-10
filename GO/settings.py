@@ -25,9 +25,9 @@ SECRET_KEY = 'gz13j*t_0e=ogm)sg_qz%fuzfs5&dyzy1tg51kh6xd@n)wla8z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'https://still-inlet-57859.herokuapp.com/'
-]
+ALLOWED_HOSTS = []
+
+# APPEND_SLASH = False
 
 
 # Application definition
@@ -40,8 +40,18 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'movie.apps.MovieConfig',
-    'api.apps.ApiConfig'
+    'api',
+    'rest_framework.authtoken',
+    'rest_framework'
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':
+    ['rest_framework.authentication.BasicAuthentication'],
+    'DEFAULT_PERMISSION_CLASSES':
+    ['rest_framework.permissions.IsAuthenticated'],
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

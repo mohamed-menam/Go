@@ -15,15 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from api.models import Movieresource
+import rest_framework
 from . import views
+from rest_framework import routers
+from api.views import MovieViewsets, GenerViewsets
 
 
-movie_resourse = Movieresource()
+router = routers.DefaultRouter()
+router.register(r'movie', MovieViewsets)
+router.register(r'Gener', GenerViewsets)
+
 
 urlpatterns = [
     path('', views.home),
     path('admin/', admin.site.urls),
     path('movies/', include("movie.urls")),
-    path('api/', include(movie_resourse.urls))
+    path('api/', include(router.urls)),
+    path('api-auth', include('rest_framework.urls'))
 ]
